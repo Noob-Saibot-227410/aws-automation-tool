@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AWS Automation Tool</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container half-screen">
+		<h1>AWS FINOPS ON/OFF</h1>
+		<div class="logo">
+			<img src="img/logo.png" alt="AWS Automation Tool Logo" width="550">
+		</div>
+		<div class="services" class="services">
+			<button id="ec2-btn" onclick="showModal('ec2')"><img src="img/icones/aws-ec2.png"/> </button> 
+			<button id="rds-btn" onclick="showModal('rds')"><img src="img/icones/aws-rds.png"/> </button>
+			<button id="dynamodb-btn" onclick="showModal('dynamodb')"><img src="img/icones/aws-dynamodb.png"/></button>
+			<button id="elasticache-btn" onclick="showModal('elasticache')"><img src="img/icones/aws-elasticache.png"/></button>
+			<button id="elasticsearch-btn" onclick="showModal('elasticsearch')"><img src="img/icones/aws-elasticsearch.png"/> </button> 
+			<button id="redshift-btn" onclick="showModal('redshift')"><img src="img/icones/aws-redshift.png"/></button> 
+			<button id="emr-btn" onclick="showModal('emr')"><img src="img/icones/aws-emr.png"/></button>
+		</div>	
+		</div>	
+	</div>
+
+	<div class="modal" id="modal">
+		<div class="modal-content">
+			<span class="close" onclick="hideModal()">&times;</span>
+			<h2 class="modal-title" id="modal-title"></h2>
+			<form id="modal-form">
+				<div class="form-group">
+					<label class="modal-field" for="identifier">Identificador:</label>
+					<input type="text" class="modal-field" id="identifier-input" name="identifier" required>
+				</div>
+				<button type="submit" class="modal-submit-btn" id="modal-submit-btn">OFF</button>
+				<button type="submit" class="modal-submit-btn-on" id="modal-submit-btn">ON</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
